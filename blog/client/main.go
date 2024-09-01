@@ -26,5 +26,6 @@ func main() {
 	// read blog
 	readBlog(c, blogID)
 
-	// updateBlog(c, blogID)
+	// update blog
+	updateBlog(c, blogID)
 }
