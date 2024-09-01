@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package calculator;
+
+option go_package = "github.com/Clement-Jean/grpc-go-course/calculator/proto";
+
+message CalculatorRequest {
+    uint64 first_number = 1;
+    uint64 second_number = 2;
+}
+
+message CalculatorResponse {
+    uint64 result = 1;
+}
+
+message CalculatorAvgResponse {
+    float result = 1;
+}
+
+service CalculatorService {
+    rpc Calculator (CalculatorRequest) returns (CalculatorResponse);
+    rpc CalculatorPrimes (CalculatorRequest) returns (stream CalculatorResponse);
+    rpc CalculatorAvg (stream CalculatorRequest) returns (CalculatorAvgResponse);
+}
