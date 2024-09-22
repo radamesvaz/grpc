@@ -31,4 +31,7 @@ func main() {
 
 	// list blog
 	listBlog(c)
+
+	// delete blog
+	deleteBlog(c, blogID)
 }
