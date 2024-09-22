@@ -28,4 +28,7 @@ func main() {
 
 	// update blog
 	updateBlog(c, blogID)
+
+	// list blog
+	listBlog(c)
 }
